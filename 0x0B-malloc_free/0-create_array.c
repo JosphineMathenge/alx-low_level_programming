@@ -1,16 +1,19 @@
-#include "main.h"		
-#include <unistd.h>
-		
-/**		
- * _putchar - writes the character c to stdout		
-* @c: The character to print		
- *		
- * Return: On success 1.		
- * On error, -1 is returned, and errno is set appropriately.		
- */		
-int _putchar(char c)		
-{	
-	return (write(1, &c, 1));
-		
-}
+#include "notrebloh.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
+/**
+ * *malloc_checked - allocate memory with malloc
+ * @b: unsigned int type
+ * Return: return pointer
+ */
+void *malloc_checked(unsigned int b)
+{
+	int *ptr;
+
+	ptr = malloc(b);
+	if (ptr == NULL)
+		exit(98);
+	return (ptr);
+}
